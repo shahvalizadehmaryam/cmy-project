@@ -1,9 +1,19 @@
-import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import Layout from "./components/layout/Layout";
+import Home from "./pages/HomePage";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline bg-red-100">cmy app</h1>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+
+          {/* <Route path="/profile" element={<ProfilePage />} /> */}
+        </Route>
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
     </>
   );
 }
