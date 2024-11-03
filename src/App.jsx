@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/HomePage";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
 
-          {/* <Route path="/profile" element={<ProfilePage />} /> */}
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
         <Route path="/login" element={<LoginPage />} />
       </Routes>

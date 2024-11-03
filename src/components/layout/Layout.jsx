@@ -5,14 +5,17 @@ import Sidebar from "../modules/Sidebar";
 const Layout = () => {
   return (
     <div className="container mx-auto max-w-screen-xl">
-      <div className="flex">
-     
-        <Sidebar />
+      <header>
         <Header />
+      </header>
+      <div className="flex">
+        <aside className="w-1/4">
+          <Sidebar />
+        </aside>
+        <main className="w-3/4 p-4">
+          <Outlet />
+        </main>
       </div>
-      <main>
-        <Outlet />
-      </main>
     </div>
   );
 };
