@@ -12,7 +12,7 @@ const Layout = () => {
         <aside className="w-1/4">
           <Sidebar />
         </aside>
-        <main className="w-3/4 p-4">
+        <main className="w-3/4">
           <Outlet />
         </main>
       </div>
